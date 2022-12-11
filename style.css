@@ -1,0 +1,192 @@
+/* Known bugs:
+1. down button not hidden when scroll 
+2. contact: circle: can only move when hovered*/
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(https://fonts.googleapis.com/css?family=Montserrat:400,700) format("truetype");
+}
+
+h3{
+  font-weight: 500;
+  font-size: 22px;
+}
+
+h4{
+  font-weight: 400;
+}
+
+* {
+  font-family: "Montserrat", Verdana, Tahoma;
+  margin: 0;
+}
+
+.nav{
+  padding: 20px 120px;background-color: #ffffff;position:fixed;width: 100vw;z-index: 20;
+}
+
+.a{
+    width: 12.5rem;
+    height: 6.25rem;
+    animation: bounce-down 2s linear infinite;
+}
+@keyframes bounce-down{
+    25%{
+        transform: translateY(-20px);
+    }
+    50%,100%{
+        transform: translateY(0);
+    }
+    75%{
+        transform: translateY(20px);        }
+}
+
+.container {
+  overflow: hidden auto;
+  width: 100vw;
+  height: 100vh;
+}
+
+.about {
+  overflow: hidden auto;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 200px;
+}
+
+.box {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+.content{
+  width: 100%;
+  margin-left: -20px;
+  padding-top: 100px;
+}
+.content ul{ width: 84%; overflow: hidden; margin: 0 auto;}
+.content ul li:nth-child(2n){ margin-right: 0;}
+.content ul li{ overflow: hidden; width: 49%; margin-left: 0; margin-right: 2%; margin-bottom: 40px; float: left;}
+.content ul li img{ display: block; transition: 0.5s; width: 100%; height: auto;}
+.content ul li:hover img{ transform: scale(1.1);}
+
+.about_content{
+  margin-left: 600px;
+  margin-right: 120px;
+  margin-top: -50px;
+  margin-bottom: 200px;
+  overflow: hidden auto;
+}
+
+.menu_box{
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  right: 360px;
+  top: 30px;
+}
+
+.menu {
+  width: 100px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu a{
+  text-decoration: none;
+  color: #000;
+}
+.selectmenu a {
+  text-decoration: underline;
+}
+
+.menu:hover a {
+  text-decoration: underline;
+}
+
+.displnone {
+  display: none;
+}
+
+.BigText {
+  font-size: 9vw;
+  font-weight: 500;
+  animation-name: BigTextexample;
+  animation-duration: 1s;
+  position: relative;
+  display: block;
+
+}
+
+.CopyRight{ text-align: center; line-height: 120px; font-size: 16px; color: #333;}
+/* .CopyRight2{ 
+  position: absolute;
+  bottom:30px;
+  text-align: center; 
+  line-height: 120px; 
+  font-size: 16px; 
+  color: #333;
+} */
+
+@keyframes BigTextexample {
+  from {
+    left: 600px;
+  }
+
+  to {
+    left: 0;
+  }
+}
+.imgdiv{
+  margin-right: 120px;
+  margin-top: 120px;
+  width: 700px;
+}
+.imgdiv img{
+  width: 600px;
+}
+.imgdiv:hover img{
+  width: 620px;
+  animation-name: imgdivhover;
+  animation-duration: 0.5s;
+}
+@keyframes imgdivhover {
+  from {
+    width: 600px;
+  }
+
+  to {
+    width: 620px;
+  }
+}
+
+.circle {
+  width: 400px;
+  height: 400px;
+  font-size: 4.55px;
+  position: absolute;
+  bottom: 70px;
+  top: 200px;
+}
+
+.circle svg {
+  overflow: visible;
+  transition: 30s;
+  fill: grey;
+}
+
+.circle svg:hover {
+  transform: rotate(2turn);
+}
+
+.circle path {
+  fill: none;
+}
+
+.contact_content{
+  transform: translate(0,35px);
+  line-height: 50px;
+  text-align: center;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>My Portfolio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600" rel="stylesheet">
+	</head>
+
+	<body style="overflow-x: hidden;">
+		<header class ="nav">
+			<div id="header">
+				<div>
+					<a href="index.html">
+					<img src="./img/logo.png" alt="interactive button" width="100px">
+					</a>
+				</div>
+
+				<div class = "menu_box">
+					<div class="menu selectmenu">
+						<a href="works.html">WORKS</a>
+					</div>
+					<div class="menu">
+						<a href="about.html">ABOUT</a>
+					</div>
+					<div  class="menu"><a href="contact.html">CONTACT</a>
+					</div>
+				</div>
+				
+			</div>
+		</header>
+
+
+		<div id="container" class="container">
+
+			<div class="box">
+				<div style="padding-top: 18vw;padding-left: 120px;">
+					<div class="BigText">DIGITAL ARTIST,</div>
+					<div id="bigtext2" class="displnone">GRAPHIC &</div>
+					<div id="bigtext3" class="displnone">UI DESIGNER.</div>
+				</div>
+				<div onclick="godown()" class="displnone" id="gobottom" style="right: 20px;position: relative;left: 84vw;bottom: 7vw;z-index: 999;">
+					<div class="a">
+					    <img src="./img/arrow.png" alt="interactive button" width="100px">
+					</div>
+				</div>
+			</div>
+
+			<div class="content" id="content">
+				<ul>
+					<li><a href="shj.html"><img src="img/Component1.png"></a></li>
+					<li><a href="responsive.html"><img src="img/Component2.png"></a></li>
+					<li><a href="dev.html"><img src="img/Component3.png"></a></li>
+					<li><a href="iterative.html"><img src="img/Component4.png"></a></li>
+				</ul>
+			</div>
+
+			<div class="CopyRight">
+				@2022 Jeff Huang All Rights Reserved
+			</div>
+
+		</div>
+
+
+	</body>
+	<script>
+		setTimeout(function() {
+			document.getElementById("bigtext2").classList.add('BigText')
+		}, 1000);
+		setTimeout(function() {
+			document.getElementById("bigtext3").classList.add('BigText')
+		}, 2000);
+		setTimeout(function() {
+			document.getElementById("gobottom").classList.remove("displnone")
+		}, 3000);
+		function godown(){
+			console.log(12345);
+			  var el = document.getElementById("content");
+			     el.scrollIntoView({
+			         block: "start",
+			         behavior: "smooth"
+			      })
+		}
+	</script>
+
+</html>
