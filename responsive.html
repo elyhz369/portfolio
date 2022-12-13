@@ -38,13 +38,17 @@
 
 
 <div class="textbox">
-	<h2>Redesigning the webpage for a bakery store.</h2>
-	<br />
+	<h2>Redesigning the homepage for a bakery store.</h2>
+	<br/>
 	<p>Have you ever visited a website and find it really hard to navigate? A good website should be user-centric with the following properties: First, new users should easily understand what to do (learnability). In addition, it should be intuitive to recall how to use and what to do (memorability). Futhermore, typical tasks should be done quickly (efficiency).
-		Keeping these qualities in mind, this project will focus on redesigning a website and making it more user friendly.
+		Keeping these qualities in mind, this project will focus on visually redesigning a website and making it more user friendly.
 		</p><br/><br/>
 	<h3>PART I - Identifying Problems</h3>
 	<br/>
+	<div id="image_box">
+		<img src = "source/TC.png" alt="Toronto Cupcake website preview" width="100%">
+		<div style="display: flex;justify-content: center;"><i>This is a preview of the original website. Toronto Cupcake is a bakery store providing cupcake delivery services.</i></div>
+	</div>
 	<p>The site I picked is <a href="https://www.torontocupcake.com/index.html#">Toronto Cupcake</a>. 
 	I chose this site because I used it to order cupcakes for my friend, and the website design was notoriously known in my friend group. The problems are as follows:</p>
 	<br/>
@@ -54,11 +58,140 @@
 			<ul>
 			<li>Navigation bar located at the bottom with a very small font size. It’s hard for users to even notice it.</li>
 			<li>Inconsistent hierarchy. Delivery time, cupcake ingredients, and branding slogan should not be placed in the same box.</li>
-
+			</ul>
+		</li>
+		<br/>
+		<li>
+			<h5>LOW LEARNABILITY</h5>
+			<ul>
+			<li>Bad image selection - a bunch of boxes in the page may confuse the users that this is a package design site. A cupcake store should put an image of delicious and well-decorated cakes in their main page to appeal to the customers.</li>
+			<li>Too much information in the folded menu. The main purpose of the website for users is  ‘see the menu and place order.’ ‘Events’, ‘Resources’ and ‘Giving back’ should be placed on social media accounts or under the same page.</li>
+			</ul>
+		</li>
+		<br/>
+		<li>
+			<h5>LOW MEMORABILITY</h5>
+			<ul>
+			<li>Hard to locate the ‘order’ button. As said above, users are here to make orders. The order button must be on a different hierarchy and easily noticed, 
+				otherwise it's hard to remember and users have to spend a lot of time finding it each time.</li>
 			</ul>
 		</li>
 	</ol>
 	<br/>
+	<p>On the good side, the website has good accessibility. There are no errors detected by <a href="https://wave.webaim.org/">WebAIM WAVE</a>.</p>
+	<br/><br/>
+
+
+	<h3>PART II - Lofi prototypes</h3>
+	<br/>
+	<p>I created 3 low-fidelity wireframes, each for mobile, tablet, and desktop screens. 
+		When designing these, I addressed the problems identified in the previous section. 
+		See the annotations for each screen :)
+	</p>
+	<br/>
+	<div id="image_box">
+		<img src = "source/Desktop.png" alt="Desktop lo-fi wireframe" width="80%" style="margin-bottom: 15px;">
+		<img src = "source/Tablet.png" alt="Tablet lo-fi wireframe" width="80%" style="margin-bottom: 15px;">
+		<img src = "source/Mobile.png" alt="Mobile lo-fi wireframe" width="80%">
+	</div>
+	<br/>
+
+	<h3>PART III - Hifi prototypes</h3>
+	<br/>
+	<p>To make the designs consistent for different screens, I created a visual style guide that displays colors, reusable components, icons, and different interactive states for buttons.</p><br/>
+	<div id="image_box">
+		<img src = "source/guide.png" alt="Visual style guide" width="80%" style="margin-bottom: 15px;">
+		<p>Visual Style Guide</p>
+	</div>
+	<br/>
+
+	<p>Using the style guide and lofi prototypes, I developed 3 hifi prototypes using Figma. Please click on the text under each image to see the full design and coding annotations.</p><br/>
+
+	<div id="image_box">
+		<img src = "source/Desktop_pre.png" alt="Desktop hi-fi wireframe" width="80%" style="margin-bottom: 15px;">
+
+		<div class="fold1">
+			<p>Click here to see design for full screen and coding annotations</p>
+		</div>
+
+		<div class="unfold1">
+			<img src = "source/Desktop_fig.png" alt="Desktop hi-fi wireframe" width="80%" style="margin-bottom: 15px;">
+			<div>
+			<h5>Notes for Coding</h5>
+			<li>Create a div for the background image and its overlaying content.</li>
+			<li>Set left & right margin to 5%.</li>
+			<li>Make sure background-attachment is fixed.</li>
+			<li>Create a grid to position items (such as logo and title) on top of the background image.</li>
+			<li>Alternatively, use 'position: absolute' and position the items.</li>
+			<li>Use flex-wrap for contents below.</li>
+			</div>
+		</div>
+	</div>
+
+	<div id="image_box">
+		<img src = "source/Tablet_pre.png" alt="Tablet hi-fi wireframe" width="80%" style="margin-bottom: 15px;">
+
+		<div class="fold2">
+			<p>Click here to see design for full screen and coding annotations</p>
+		</div>
+
+		<div class="unfold2">
+			<img src = "source/Tablet_fig.png" alt="Tablet hi-fi wireframe" width="50%" style="margin-bottom: 15px;">
+			<div>
+			<h5>Notes for Coding</h5>
+			<li>When device width is less than 1100px, use media query and change the navbar to a hamburger menu</li>
+			<li>Everything else in the div containing background image should be inherited if grid was used.</li>
+			<li>Restyle the 'best seller' div matching the design in prototype.</li>
+			<li>Within @media(max-width: 1100px), show the restyled best seller div and hide the best seller div for desktop.</li>
+			<li>Resize text if there're overlaps.</li>
+			</div>
+		</div>
+	</div>
+
+	<div id="image_box">
+		<img src = "source/Mobile_pre.png" alt="Mobile hi-fi wireframe" width="80%" style="margin-bottom: 15px;">
+
+		<div class="fold3">
+			<p>Click here to see design for full screen and coding annotations</p>
+		</div>
+
+		<div class="unfold3">
+			<img src = "source/Mobile_fig.png" alt="Mobile hi-fi wireframe" width="25%" style="margin-bottom: 15px; margin-left: 20%; margin-right: 20%;">
+			<div>
+			<h5>Notes for Coding</h5>
+			<li>When device width is less than 700px, resize the div containing background image, also reset the grid.</li>
+			<li>Similarly, when device width is less than 400px, resize the div and reset the grid.</li>
+			<li>The grid should have 5 rows and 3 columns.</li>
+			<li>Put logo, menu, and cart in each column at first row. The title 'TORONTO CUPCAKE' should be in the 2nd column and take rows 2-4.</li>
+			<li>Restyle best seller, show the restyled div, and hide the best seller div for tablet.</li>
+			</div>
+		</div>
+	</div>
+	<br/>
+
+	<h3>PART IV - Responsive Redesign</h3>
+	<br/>
+	<p>As planned by previous steps, now is the time to code the redesigned responsive webpage. This project focuses on responsive and visual design,
+		so most items in the page are not coded with function or interaction.</p><br/>
+		<p><a href="https://elyhz369.github.io/responsive_redesign/
+			">CLICK HERE</a> to see the website!</p><br/>
+	<h6>Citations</h6>
+	<li>I found the background image on Pinterest, and made my own edits.</li>
+	<li>All other images are direct screenshots from Toronto Cupcake's original site.</li>
+			
+			
+			
+			<br/><br/><br/>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -77,6 +210,64 @@
 
 	</body>
 	<script>
+		var coll = document.getElementsByClassName("fold1");
+		var coll2 = document.getElementsByClassName("fold2");
+		var coll3 = document.getElementsByClassName("fold3");
+		var i;
+		var j;
+		var k;
+
+		for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.display === "block") {
+			content.style.display = "none";
+			} 
+			else if (content.style.display === "flex") {
+			content.style.display = "none";
+			}
+			else {
+			content.style.display = "block";
+			content.style.display = "flex";
+			}
+		});
+		}
+
+		for (k = 0; k < coll3.length; k++) {
+		coll3[k].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.display === "block") {
+			content.style.display = "none";
+			} 
+			else if (content.style.display === "flex") {
+			content.style.display = "none";
+			}
+			else {
+			content.style.display = "block";
+			content.style.display = "flex";
+			}
+		});
+		}
+
+		for (j = 0; j < coll2.length; j++) {
+		coll2[j].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.display === "block") {
+			content.style.display = "none";
+			} 
+			else if (content.style.display === "flex") {
+			content.style.display = "none";
+			}
+			else {
+			content.style.display = "block";
+			content.style.display = "flex";
+			}
+		});
+		}
+
 	</script>
 
 </html>

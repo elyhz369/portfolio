@@ -229,3 +229,55 @@ h5{
   width: 45%;
   padding: 15px;
 }
+
+
+/* FOR RESPONSIVE PAGE */
+.fold1{
+  font-style: italic;
+  cursor: pointer;
+  color: cornflowerblue;
+}
+.fold1:hover{
+  text-decoration: underline;
+}
+.unfold1{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  display: none;
+  flex-wrap: wrap;
+}
+.fold2{
+  font-style: italic;
+  cursor: pointer;
+  color: cornflowerblue;
+}
+.fold2:hover{
+  text-decoration: underline;
+}
+.unfold2{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  display: none;
+  flex-wrap: wrap;
+}
+.fold3{
+  font-style: italic;
+  cursor: pointer;
+  color: cornflowerblue;
+}
+.fold3:hover{
+  text-decoration: underline;
+}
+.unfold3{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: none;
+  flex-wrap: wrap;
+}
