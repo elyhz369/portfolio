@@ -210,6 +210,28 @@ h5{
   fill: none;
 }
 
+.circle1 {
+  width: 400px;
+  height: 400px;
+  font-size: 7.5px;
+  position: absolute;
+  bottom: 70px;
+  top: 200px;
+}
+
+.circle1 svg {
+  overflow: visible;
+  transition: 30s;
+}
+
+.circle1 svg:hover {
+  transform: rotate(2turn);
+}
+
+.circle1 path {
+  fill: none;
+}
+
 .contact_content{
   transform: translate(0,35px);
   line-height: 50px;
@@ -280,4 +302,38 @@ h5{
   justify-content: center;
   display: none;
   flex-wrap: wrap;
+}
+
+.phone{
+  display: none;
+}
+
+.vod{
+  display: none;
+}
+
+@media (max-width: 950px){
+  .phone{
+    display: none;
+  }
+  .all{
+    display: none;
+  }
+  .vod{
+    display: contents;
+  } 
+}
+
+@media (max-width: 500px){
+  .all{
+    display: none;
+  }
+  .vod{
+    display: none;
+  }
+  .phone{
+    display: contents;
+    margin-top: 70vh;
+    text-align: center;
+  }
 }
