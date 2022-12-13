@@ -1,6 +1,8 @@
 /* Known bugs:
 1. down button not hidden when scroll 
-2. contact: circle: can only move when hovered*/
+2. contact: circle: can only move when hovered
+3. 'phone' class continue to show despite hidden*/
+
 
 @font-face {
   font-family: "Montserrat";
@@ -32,6 +34,7 @@ h5{
   font-size: 15.5px;
   font-weight: 500;
 }
+
 
 * {
   font-family: "Montserrat", Verdana, Tahoma;

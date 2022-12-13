@@ -34,21 +34,153 @@
 			<div class="box">	
 			<div style="padding-top: 150px;padding-left: 120px;">
 				<h1>STORIES OF SHAN HAI JING</h1>
-				<br />
-				<h3>没写呢 肝不动了</h3>
+				<br/>
 
+
+<div class="textbox">
+	<h2>A mobile game based on chinese myths and creatures.</h2>
+	<h2 style="margin-top: 5px; font-size: 18px; font-weight: 400;">Skills: #Digital Art (PS, Procreate), #UI Design (Figma), #Game Design</h2>
+	<br/>
+	<p>We all know at least some about mythical creatures and stories: most from celtic or greek. There are many games, literature, or movies based on these mythologies. However, not many of them have Chinese mythical creatures (well, except Chinese Dragons). Thus, me and a few friends decided to develop a mobile game based on Shan Hai Jing (山海经), the compilation of mythical beasts of China. We hope that players could learn more about Chinese culture and have fun with these creatures.
+		<br/><br/>
+		As the founder of this project, I’m mainly responsible for designing the gameplay and all visual elements. In the following, I will present the visual designs - including sketches, character designs, and user interface - and how things change as we develop the gameplay.
+		
+		</p><br/><br/>
+	<h3>PART I - Brainstorming & Sketching</h3>
+	<br/>
+	<p>In the very beginning, I brainstormed 3 potential gameplay and created 3 corresponding sketches:</p></br>
+	<div id="image_box">
+		<img src = "source/shj_sketch.png" alt="3 sketches" width="80%">
+	</div>
+	</br>
+	<h5>Sketch #1</h5></br>
+	<ul>
+		<li><u>Keyword:</u> crafting & simulation.</li>
+		<li><u>Game experience:</u> users will collect materials and build a residential area for mythical creatures. As you feed and bond with them, they’ll tell you more about themselves.</li>
+		<li>As you can see in the sketch, there is a functional building, a wooden house, a lake, and a grassland.</li>
+		<ul>
+			<li>Functional building: users will operate the functional buildings to collect coins. Can unlock new buildings clicking on the icon at the bottom.</li>
+			<li>House: a dorm for the creatures. Users can use coins to unlock more space. In the beginning there are only 4 spaces to host 4 creatures, but when users unlock new space, a random creature will arrive in town.</li>
+			<li>Lake: Creatures can drink water in the lake. Users have to clean the lake once in a while using coins.</li>
+			<li>Grassland: Food for creatures. Users have to refill stock using coins.</li>
+		</ul>
+		<li>At the top right corner, there are 2 boxes displaying the current value of prosperity and coins. To gain more coins, users have to build more functional buildings and keep them operating. To keep a good level of prosperity, users have to expand the land and constantly clean the lake and refill food. When prosperity is too low, creatures may permanently leave your game.</li>
+	</ul>
+	</br>
+	<h5>Sketch #2</h5></br>
+	<ul>
+		<li><u>Keyword:</u> visual novel.</li>
+		<li><u>Game experience:</u> Users will read stories by clicking on the bottom-left icon, and unlock different buildings indicated by the red tags.</li>
+		<li>Building examples:</li>
+		<ul>
+			<li>Museum: view different mythical creatures in Shan Hai Jing.</li>
+			<li>Library: see description of different geographical locations in Shan Hai Jing.</li>
+			<li>Shrine: inspired by the Chinese calendar, users will draw an advice of the day.</li>
+		</ul>
+		<li>The main experience is to unlock more stories and learn about mythical creatures, the buildings are supplements to the reading experience.</li>
+	</ul>
+	</br>	
+	<h5>Sketch #3</h5></br>
+	<ul>
+		<li><u>Keyword:</u> casual.</li>
+		<li><u>Game experience:</u> a simplified combination of the ideas presented in sketch 1&2. Users will collect coins from the tree to unlock stories in a random order. Users will also collect lotus crystals to unlock creatures. Different to sketch #1, unlocked creatures will not be visually visible in the page but they’ll exist in spirit form which can be viewed by clicking on the incense burner (located on the table). There are also many rare stories that can only be unlocked when the prerequisite spirit is in the incense burner.</li>
+	</ul>
+</br>
+</br>
+
+
+	<h3>PART II.A - Version 1 Overview</h3></br>
+	<p>After a few rounds of iteration, we decided to develop our MVP in Figma based on sketch #1. We also added more features and incorporated different ideas from the other 2 sketches. Here is an overview of changes:
+	</p></br>
+	<ul>
+	<li>The original document of Shan Hai Jing is a compilation of scattered stories, users may find it very confusing when reading. Thus, we decided to <u>create an original background story</u> with close reference to Shan Hai Jing for a better experience.
+	</li>
+	<li>The <u>screen should be vertical</u> for aesthetic purposes (reference to sketch #3).
+	</li>
+	<li>Keep the overall simulation experience in sketch #1, but focus on the creatures instead of crafting and building the residential area. As a result of this decision, we removed the process of manual building - the <u>buildings will be in a preset position</u> (similar to sketch #2), the only thing users do is to unlock them as the story progresses. That said, users still have to collect materials to unlock new territory.</li>
+</ul></br>
+
+
+
+	<h6>New Background Story</h6></br>
+	<p>You (player) are the guardian of the spirits in Shan Hai Jing. However, due to an accident, all the spirits are lost or damaged except one. As the guardian, you must find and repair all other spirits, and finally put them back to rest in the archive.
+	</p></br>
+	<p>In the beginning of the story (and the game), you encountered a mysterious old man. He gave you an incense burner, and when you touch it you’ll enter a divinatory space (represented by the map in the game.) In this world, the spirits will revive into their original form and you can understand their language. Since most spirits lost their memories, after finding them you’ll also have to help them restore their memories (by simulating and making the space more prosperous) before they’re willing to go back to the archive.
+	</p></br>
+	<p>The mysterious old man disappeared and you decided to try with the only spirit in hand. You entered the divinatory space and the spirit turned into a blue parus. The bird does not remember anything except its name - “Qing Niao (青鸟)” - but it still wanted to help you to find other spirits. After a brief discussion, you made a plan: Qing Niao will explore everyday and bring back random spirits, and your job is to manage the divinatory space and cure these spirits.
+	</p></br></br>
+
+
+
+	<h3>PART II.B - Version 1 Visual Components</h3></br>
+	<h6>Character Design</h6></br>
+	<div id="image_box">
+		<img src = "source/shj_cd1.JPG" alt="Mysterious old man" width="50%"style="margin-bottom: 10px;">
+		<img src = "source/shj_cd2.png" alt="Qing Niao" width="50%" style="margin-bottom: 10px;">
+		<div style="display: flex;justify-content: center;"><i>Main characters: Mysterious old man & Qing Niao</i></div>
+	</div>
+	</br>
+	<h6>Map</h6></br>
+	<div id="image_box">
+		<img src = "source/shj_map.png" alt="map design" width="100%" style="margin-bottom: 10px;">
+		<div style="display: flex;justify-content: center;"><i>The divinatory space</i></div>
+	</div>
+	</br>
+	<h6>Interface Preview</h6></br>
+	<p>Since we haven’t published the game, I’ll only present 2 screenshot previews of the product.</p></br>
+	<div id="image_box">
+		<img src = "source/shj_fig1.png" alt="screenshot1" width="80%" style="margin-bottom: 10px;">
+		<div style="display: flex;justify-content: center;"><i>Preview 1: Qing Niao and the mysterious old man talking about how to restore the spirits.</i></div>
+		<img src = "source/shj_fig2.png" alt="screenshot2" width="80%"style="margin-bottom: 10px;">
+		<div style="display: flex;justify-content: center;"><i>Preview 2: Main page of the game. Users can click on Qing Niao at the bottom left corner and sent it on a spirit scout. When Qing Niao is not at home, users can operate the buildings in the space: collect materials, operate the buildings, bond with other spirits in the space, and improve prosperity. </i></div>
+	</div>
+	</br></br>
+
+
+
+	<h3>PART III - Current progress</h3></br>
+	<p>We completed the first round of user testing using the Minimal Viable Product designed with Figma. Currently, my teammates are developing the game in Unity2D and we'll run our beta testing early next year.</p></br>
+	<p>On top of that, I'm refining the functionalties of the buildings and creating a more detailed version of visual elements.</p></br>
+	<div id="image_box">
+		<img src = "source/shj_inprogress.png" alt="screenshot1" width="100%" style="margin-bottom: 10px;">
+		<div style="display: flex;justify-content: center;"><i>Current progress - preview</i></div>
+	</div>
+
+			
+			
+			
+	
+	
+	
+	
+	<br/><br/><br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<br/><br/><br/>
+	<div class="back" onclick="window.location.href='works.html'">
+		<span style="border-bottom: #000 1px solid; font-size: 18px; cursor: pointer;">BACK TO WORKS</span>
+	</div>
+	<div style="height: 100px;display: flex;justify-content: center;align-items: center;">© 2022 Jeff Huang All Rights Reserved</div>
+
+</div>
 				
 				</div>
-			</div>
-			<div class="box">
-				<div class="back" onclick="window.location.href='works.html'"  style="height: 100px;position: relative;top: 99vh;margin-left: 120px;cursor: pointer;">
-					<span style="border-bottom: #000 1px solid; font-size: 18px;">BACK TO WORKS</span>
-				</div>
-				<div style="height: 100px;display: flex;justify-content: center;align-items: center;position: relative;top: 99vh;">© 2022 Jeff Huang All Rights Reserved</div>
 			</div>
 		</div>
 
 
+	</body>
 	</body>
 	<script>
 	</script>
