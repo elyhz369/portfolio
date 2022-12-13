@@ -29,23 +29,91 @@
 				
 			</div>
 		</header>
-		
+
 		<div id="container" class="container">
 			<div class="box">	
 			<div style="padding-top: 150px;padding-left: 120px;">
 				<h1>ONLINE STORE DEVELOPMENT</h1>
-				<br />
-				<h3>没写呢 肝不动了</h3>
-				
-				</div>
+				<br/>
+		
+		<div class="textbox">
+			<h2>Designing a online art store with sort & filter functions.</h2>
+			<h2 style="margin-top: 5px; font-size: 18px; font-weight: 400;">Skills: #Digital Art (Procreate) #Graphic Design (PS), #UIUX (Figma), #html+css, #React+js</h2>
+		
+			<br/>
+			<p></p><br/><br/>
+
+			<h3>PART I - Prototyping</h3>
+			<br/>
+			<p>Before coding, I created a figma prototype considering usability principles:</p><br/>
+			<ul>
+				<li>I used a minimalistic layout to make the artworks stand out.</li>
+				<li>The title of the page is marked in bold so users will know the purpose of this page immediately.</li>
+				<li>'Cart total' is highlighted in black in contrast to the white surrounding so users could easily locate where it is (learnability).</li>
+				<li>Sort/filter put in a box with 'default' button checked automatically to indicate that the buttons/checkboxes in this container are all clickable.</li>
+			</ul></br>
+			<div id="image_box">
+				<img src = "source/dev_fig.png" alt="3 sketches" width="100%">
+			</div><br/><br/>
+
+			<h3>PART II - General Structure for Coding</h3>
+			<br/>
+			<p><a href="https://github.com/elyhz369/development_page">CLICK HERE</a> to see the github repo if you're intersted :)</p><br/>
+			<h6>Organization of Components</h6><br/>
+			<ul>
+				<li>I created an assets folder, a components foder, and a main App.js file.</li>
+				<li>ArtworkData.json in the assets folder is designed to store all information for each item.</li>
+				<li>ArtItems.js is the component for each item that includes the image, name, price, add to cart, and remove to cart button.</li>
+				<li>In the App.js file, I designed multiple functions that are related to sort, filter, and cart(add/remove). The sort and filter functions together create the selection box component, and the cart functions help with the aggregator component.</li>
+			</ul><br/>
+			<h6>How Data is Passed Down Through Components</h6><br/>
+			<ul>
+				<li>The general idea: Data and properties of each item are stored in ArtworkData.json, ArtItems.js take these information and create a reusable component for each item, including an image, price, and other properties. These items will be mapped and visually displayed in the html section in App.js.</li>
+				<li>The attributes 'price', 'type', and 'content' are important data used throughout the main App.js file. My filter/sort related functions will judge whether a certain attribute exists and then push the item into the new array. For example, if users click on 'B&W', only artworks that includes the type 'B&W' can be pushed to the new array.</li>
+				<li>Another example of how data is passed down through props: The function ArtItems() takes in the props item, cart, addToCart, removeFromCart. 'item' allows the function to read data associated with each item (e.g. price, content, etc.) The function will then check if an item is in 'cart'. If users click and add an item to cart, the button will change to remove with the function removeFromCart(). If users click and remove an item from cart, the button will change to add with the function addToCart().</li>
+			</ul><br/>
+			<h6>How the User Triggers State Changes</h6><br/>
+			<ul>
+				<li>'activeStyleFilters' is an empty array when users first enters site, when users click corresponding style filters, the state will change to an array of items that matches the value that the filter is looking for. 'activeContentFilters' has a similar idea to 'activeStyleFilters'.</li>
+				<li>'sortBy' is set to an array of items with the order of 'id' in ArtworkData.json. When users clicks sort by price, the state will change to an array of all items with price from low to high.</li>
+				<li>'cart' has an empty state in the beginning. When users add/remove items, the state will be changed to 'newCart', which contains aggregated price of items that are currently in cart.</li>
+				<li>'displayProducts' visually shows the art items. When users first enter the website its default state is set to 'ArtworkData', which means it will display items in the order it was presented in ArtworkData.json. When users sort or filter, it will visually display the new state from 'sortBy', 'activeStyleFilters', and 'activeContentFilters'.</li>
+			</ul></br><br/>
+
+			<h3>PART III - Final Product</h3>
+			<br/>
+			<p><a href="https://elyhz369.github.io/development_page/">CLICK HERE</a> to see the page I created! Although the price and item names are included in the image for each item, I decided to show them again underneath in case the images fail to load.</p><br/>
+			<p>You can play with the sort, filter, and add to cart funcions. Keep in mind that this page only shows functionalities, you cannot actually proceed to checkout. However, if you're interested in shopping my prints, I'm currently in the process of merging this store into my portfolio site. Come back and check later!</p>
+			<!-- <p>Also, if you want to take a closer look at the art works I created, check out the <a href="">GALLERY</a>.</p> -->
+
+					
+					
+					
+					<br/><br/><br/>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<br/><br/><br/>
+			<div class="back" onclick="window.location.href='works.html'">
+				<span style="border-bottom: #000 1px solid; font-size: 18px; cursor: pointer;">BACK TO WORKS</span>
 			</div>
-			<div class="box">
-				<div class="back" onclick="window.location.href='works.html'"  style="height: 100px;position: relative;top: 99vh;margin-left: 120px;cursor: pointer;">
-					<span style="border-bottom: #000 1px solid; font-size: 18px;">BACK TO WORKS</span>
-				</div>
-				<div style="height: 100px;display: flex;justify-content: center;align-items: center;position: relative;top: 99vh;">© 2022 Jeff Huang All Rights Reserved</div>
-			</div>
+			<div style="height: 100px;display: flex;justify-content: center;align-items: center;">© 2022 Jeff Huang All Rights Reserved</div>
+		
 		</div>
+						
+						</div>
+					</div>
+				</div>
 
 
 	</body>
